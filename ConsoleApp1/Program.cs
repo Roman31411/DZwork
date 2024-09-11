@@ -13,32 +13,42 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int[] Array = new int [5];
-            Console.WriteLine ("заполните массив:");
-            for (int i = 0; i < Array.Length; i++)
-            {
-                Console.Write("Элемент " + i+":\t");
-                Array[i] = int.Parse(Console.ReadLine());
-            }
-            Console.Write ("Вывод массива:");
-            for (int i = 0; i < Array.Length; i++)
-            {
-                Console.Write("\t"+Array[i]);
-            }
-            Console.WriteLine("\n");
+            int j = 1;
+int sum = 1;
+int count = 0;
+Console.WriteLine("Введиет кол-во эл");
+int elementmasiv = int.Parse(Console.ReadLine());
 
-            
-            for (int i = 0; i < Array.Length; i++)
-            {
-                double j = Math.Pow(Array[i], 2);
-                Console.WriteLine("Квадрат Элемента "+ i + ":\t" + j +"\n");
-                double l = Math.Sqrt(Array[i]);
-                Console.WriteLine("Корень эллемента " + i + ":\t" + l +"\n");
+int[] Array = new int [elementmasiv];
+Console.WriteLine ("заполните массив:");
+for (int i = 0; i < Array.Length; i++)
+{
+    Console.Write("Элемент " + i+":\t");
+    Array[i] = int.Parse(Console.ReadLine());
+}
+Console.Write ("Вывод массива:");
+for (int i = 0; i < Array.Length; i++)
+{
+    Console.Write("\t"+Array[i]);
+    j = 2;
+    sum = 1;
 
-            }
+    for (j = 2; j < Array[i]/2+1; j++) 
+    {
+        if (Array[i]%j==0 && Array[i]!=j)
+        {
+            sum = sum+j;
 
+        }
+        if (sum == Array[i])
+        {
+            count++;
+        }
+    }
+}
+Console.WriteLine("\nкол-во совершеных чисел:\t" + count);
 
-            Console.ReadLine();
+Console.ReadLine();
         }
     }
 }
