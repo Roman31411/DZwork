@@ -13,7 +13,7 @@ namespace ConsoleApp8
             int count1 = 0;
             for (int i = 59049; i <= 531440; i++)
             {
-                string number = ConverttoBase9(i);
+                string number = ConvertToBase9(i);
                 if (number.Length == 6) 
                 {
                     int s = int.Parse(number.Substring(0, 1));
