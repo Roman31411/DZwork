@@ -13,8 +13,8 @@ namespace ConsoleApp8
             int count1 = 0;
             for (int i = 59049; i <= 531440; i++)
             {
-                string number = ConvertToBase9(i);
-                if (number.Length == 6) // Check if the number is 6 digits long
+                string number = ConverttoBase9(i);
+                if (number.Length == 6) 
                 {
                     int s = int.Parse(number.Substring(0, 1));
                     int w = int.Parse(number.Substring(number.Length - 1, 1));
